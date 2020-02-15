@@ -1,24 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
+import {Header, Nav, Mapper, Itinerary, Photos, Footer} from './components';
+import './fonts.css';
+import './origin/vendor/bootstrap/css/bootstrap.min.css';
+import './origin/vendor/fontawesome-free/css/all.min.css';
+import './origin/vendor/simple-line-icons/css/simple-line-icons.css';
+import './origin/css/stylish-portfolio.css';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav />
+      <Header />
+      <Mapper />
+      <Itinerary />
+      <Photos />
+      <Footer />
     </div>
   );
 }
