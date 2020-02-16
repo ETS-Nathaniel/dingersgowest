@@ -1,10 +1,10 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import {Header, Nav, Mapper, Itinerary, Photos, Footer} from './components';
 import './fonts.css';
 import './origin/vendor/bootstrap/css/bootstrap.min.css';
 import './origin/vendor/fontawesome-free/css/all.min.css';
 import './origin/vendor/simple-line-icons/css/simple-line-icons.css';
-import './origin/css/stylish-portfolio.css';
 import './App.css';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <Nav />
       <Header />
-      <Mapper />
+      <div id="mapper" />
       <Itinerary />
       <Photos />
       <Footer />

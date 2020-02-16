@@ -1,20 +1,38 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
+import mapboxgl from 'mapbox-gl';
+import '../css/mapper.css';
+mapboxgl.accessToken = 'pk.eyJ1IjoiZXRzLW5hdGhhbmllbCIsImEiOiJjazZud20wOWQxNWMzM2xwYng3MDJnOGhmIn0.WXLlcu4cBcEHpY_Cq-YKHA';
 
-function Mapper () {
-  return (
-  <section class="content-section bg-light" id="about">
-    <div class="container text-center">
-      <div class="row">
-        <div class="col-lg-10 mx-auto">
-          <h2>Stylish Portfolio is the perfect theme for your next project!</h2>
-          <p class="lead mb-5">This theme features a flexible, UX friendly sidebar menu and stock photos from our friends at
-            <a href="https://unsplash.com/">Unsplash</a>!</p>
-          <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">What We Offer</a>
-        </div>
-      </div>
+class Mapper extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+    lng: 5,
+    lat: 34,
+    zoom: 2
+    };
+    }
+
+  componentDidMount() {
+    const map = new mapboxgl.Map({
+    container: this.mapContainer,
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [this.state.lng, this.state.lat],
+    zoom: this.state.zoom
+    });
+    }
+
+  render() {
+    return (
+    <div>
+    <div ref={el => this.mapContainer = el} className="mapContainer" />
     </div>
-  </section>
-  )
-}
+    )
+    }
+  
+  }
+   
+ReactDOM.render(<Mapper />, document.getElementById('mapper'));
 
 export default Mapper
