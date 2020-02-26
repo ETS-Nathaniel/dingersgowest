@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <Nav />
       <Header />
-      <div id="mapper" />
+      <Mapper />
       <Itinerary />
       <Photos />
       <Footer />
