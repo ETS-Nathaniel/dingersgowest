@@ -1,59 +1,77 @@
-import React from 'react';
-import mapboxgl from 'mapbox-gl';
-import '../css/mapper.css';
+import React, {Component, PureComponent} from 'react';
+import ReactMapGL, {Marker, Layer, Source} from 'react-map-gl';
 import MapData from '../data/mapData.json';
-mapboxgl.accessToken = 'pk.eyJ1IjoiZXRzLW5hdGhhbmllbCIsImEiOiJjazZud20wOWQxNWMzM2xwYng3MDJnOGhmIn0.WXLlcu4cBcEHpY_Cq-YKHA';
+import Mark from '../img/baseline_place_black_18dp.png';
+import {fromJS} from 'immutable';
+import '../css/mapper.css';
 
-class Mapper extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    lat: 34.1509,
-    lng: -100.5841,
-    zoom: 3.39,
-    interactive: false
-    };
+const MAPBOX_TOKEN = 'pk.eyJ1IjoiZXRzLW5hdGhhbmllbCIsImEiOiJjazZud20wOWQxNWMzM2xwYng3MDJnOGhmIn0.WXLlcu4cBcEHpY_Cq-YKHA';
+
+const mapStyle = fromJS({
+  version: 8,
+  sources: {
+      points: {
+          type: 'geojson',
+          data: {MapData}
+      }
+  },
+  layers: [
+      {
+        'id': 'route',
+        'type': 'line',
+        source: 'points',
+        'layout': {
+          'line-join': 'round',
+          'line-cap': 'round'
+          },
+        'paint': {
+          'line-color': '#888',
+          'line-width': 8
+        }
+      }
+  ]
+});
+
+class Markers extends PureComponent {
+  render() {
+    const {data} = this.props;
+    return data.map(
+      city => <Marker longitude={city.geometry.coordinates[0]} latitude={city.geometry.coordinates[1]} ><img src={Mark} /></Marker>
+    )
   }
-  
-  componentDidMount() {
-    const map = new mapboxgl.Map({
-      container: this.mapContainer,
-      style: 'mapbox://styles/mapbox/streets-v11',
-      center: [this.state.lng, this.state.lat],
-      zoom: this.state.zoom,
-      interactive: this.state.interactive
-    });
-    MapData.features.forEach(function(marker) {
-      // create a HTML element for each feature
-      var el = document.createElement('div');
-      el.className = 'marker';
-      // make a marker for each feature and add to the map
-      new mapboxgl.Marker(el)
-        .setLngLat(marker.geometry.coordinates)
-        .addTo(map);
-    });
-    // map.addLayer({
-    //   'id': 'route',
-    //   'type': 'line',
-    //   'source': MapData,
-    //   'layout': {
-    //   'line-join': 'round',
-    //   'line-cap': 'round'
-    //   },
-    //   'paint': {
-    //   'line-color': '#888',
-    //   'line-width': 8
-    //   }
-    // });
-  }
+}
+
+class Mapper extends Component {
+
+  state = {
+    viewport: {
+      width: '100%',
+      height: '90vh',
+      latitude: 34.1509,
+      longitude: -100.5841,
+      zoom: 3.39
+    }
+  };
 
   render() {
     return (
-    <div>
-    <div ref={el => this.mapContainer = el} className="mapContainer" />
-    </div>
-    )
-    }
+      <ReactMapGL
+        mapStyle={mapStyle}
+        {...this.state.viewport}
+        onViewportChange={(viewport) => this.setState({viewport})}
+        mapboxApiAccessToken={MAPBOX_TOKEN}
+        scrollZoom={false}
+        dragPan={false}
+        dragRotate={false}
+        doubleClickZoom={false}
+        touchZoom={false}
+        touchRotate={false}
+        keyboard={false}
+      >
+      <Markers data={MapData.features} />
+      </ReactMapGL>
+    );
   }
+}
 
 export default Mapper
