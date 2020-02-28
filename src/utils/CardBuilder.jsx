@@ -1,37 +1,41 @@
 import React from 'react';
+import Carousel from '@brainhubeu/react-carousel';
+import '@brainhubeu/react-carousel/lib/style.css';
+import {NewOrleans, SanAntonio, WhiteSands, PetrifiedForest, GrandCanyon, SantaMonica, Sequoia, SaltLakeCity, RockyMountains, KansasCity, GatewayArch, Nashville} from './cards/index';
 
-const CardBuilder = props => Object.entries(props.cardConfig).map(item => {
-  const label = item[0];
-  const {image, date, weather, interest, hiking, climbing, photos} = item[1];
+const CardBuilder = () => {
 
   return (
-        <div className="location-card bg-secondary">
-          <img className="image-head" src={image} />
-          <h4 className="text-secondary">
-            <strong>{label}</strong>
-          </h4>
-          <p className="text-faded mb-0">{date}</p>
-          <table className="it-table-style">
-            <tr className="it-table-row">
-              <p>{weather}</p>
-            </tr>
-            <tr className="it-table-row">
-              <td className="table-label">Points Of Interest</td>
-              <td className="table-content">{interest}</td>
-            </tr>
-            <tr className="it-table-row">
-              <td className="table-label">Hiking</td>
-              <td className="table-content">{hiking}</td>
-            </tr>
-            <tr className="it-table-row">
-              <td className="table-label">Climbing</td>
-              <td className="table-content">{climbing}</td>
-            </tr>
-            <tr className="it-table-row">
-              <p>{photos}</p>
-            </tr>
-          </table>
-        </div>
-  )})
+      <Carousel
+        className="row"
+        centered
+        slidesPerPage={3.5}
+        arrows
+        breakpoints={{
+        1500: {
+          slidesPerPage: 3,
+        },
+        1280: {
+          slidesPerPage: 2,
+        },
+        880: {
+          slidesPerPage: 1,
+        },
+      }}
+      >
+        <NewOrleans />
+        <SanAntonio />
+        <WhiteSands />
+        <PetrifiedForest />
+        <GrandCanyon />
+        <SantaMonica />
+        <Sequoia />
+        <SaltLakeCity />
+        <RockyMountains />
+        <KansasCity />
+        <GatewayArch />
+        <Nashville />
+    </Carousel>
+  )}
 
 export default CardBuilder

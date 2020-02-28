@@ -1,7 +1,6 @@
 import React from 'react';
 import '../css/itinerary.css';
 import CardBuilder from '../utils/CardBuilder';
-import CardConfig from '../utils/CardConfigure';
 
 function Itinerary () {
   return (
@@ -12,9 +11,7 @@ function Itinerary () {
         <h2 className="mb-5 text-primary">Follow along on our trip</h2>
       </div>
       </div>
-      <div className="row">
-        <CardBuilder cardConfig={CardConfig} />
-    </div>
+    <CardBuilder />
   </section>
   )
 }
