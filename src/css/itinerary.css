@@ -1,0 +1,41 @@
+.location-card {
+  border-radius: 10px;
+  min-width: 400px;
+  width: 400px;
+  padding-bottom: 25px;
+  margin: 0 10px 0 10px;
+}
+
+.image-head {
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 15px;
+  padding: 0;
+  width: 100%;
+}
+
+.table-label {
+  font-weight: bold;
+  padding-right: 10px;
+  text-align: end;
+  white-space: nowrap;
+}
+
+.it-table-style {
+  width: 90%;
+  margin: auto;
+}
+
+.it-table-row {
+  vertical-align: top;
+}
+        
+.table-content {
+  text-align: start;
+}
+
+.row {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  overflow: scroll;
+  padding: 0 20px 0 20px;
+}

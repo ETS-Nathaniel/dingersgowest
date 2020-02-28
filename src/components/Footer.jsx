@@ -22,7 +22,7 @@ function Footer() {
           </a>
         </li>
       </ul>
-      <p class="text-muted small mb-0">Copyright &copy; Your Website 2019</p>
+      <p class="text-muted small mb-0">Copyright Comeaux Design and Elevate Tech Solutions 2020</p>
     </div>
   </footer>
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 function Header () {
   return (
-  <header class="masthead d-flex">
+  <header className="masthead d-flex">
   </header>
   )
 }

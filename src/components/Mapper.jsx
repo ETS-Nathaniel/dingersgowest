@@ -56,7 +56,7 @@ class Mapper extends Component {
   render() {
     return (
       <ReactMapGL
-        mapStyle={mapStyle}
+        /* mapStyle={mapStyle} */
         {...this.state.viewport}
         onViewportChange={(viewport) => this.setState({viewport})}
         mapboxApiAccessToken={MAPBOX_TOKEN}
