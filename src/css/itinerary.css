@@ -43,3 +43,11 @@
 .BrainhubCarouselItem {
   align-items: stretch !important;
 }
+
+.travel-top {
+  margin-top: 50px;
+}
+
+.travel-image {
+  width: 90%;
+}

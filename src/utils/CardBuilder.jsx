@@ -2,6 +2,7 @@ import React from 'react';
 import Carousel from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 import {NewOrleans, SanAntonio, WhiteSands, PetrifiedForest, GrandCanyon, SantaMonica, Sequoia, SaltLakeCity, RockyMountains, KansasCity, GatewayArch, Nashville} from './cards/index';
+import TravelCard from './cards/Traveling';
 
 const CardBuilder = () => {
 
@@ -23,6 +24,7 @@ const CardBuilder = () => {
         },
       }}
       >
+        <TravelCard date="May 15" />
         <NewOrleans />
         <SanAntonio />
         <WhiteSands />
