@@ -38,6 +38,8 @@
   flex-wrap: nowrap !important;
   overflow: scroll;
   padding: 0 20px 0 20px;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 .BrainhubCarouselItem {
@@ -50,4 +52,8 @@
 
 .travel-image {
   width: 90%;
+}
+
+.hide-card {
+  display: none;
 }

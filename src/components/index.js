@@ -1,6 +1,6 @@
 import Header from './Header';
 import Nav from './Nav';
-import Mapper from './Mapper';
+import Mapper from './map/Mapper';
 import Itinerary from './Itinerary';
 import Photos from './Photos';
 import Footer from './Footer';

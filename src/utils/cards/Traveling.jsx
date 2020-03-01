@@ -4,7 +4,7 @@ import DriveIcon from '../../img/road.png';
 export default (props) => {
 
   return (
-        <div className="location-card bg-secondary">
+        <div className={`location-card bg-secondary ${props.hide}`}>
           <h1 className="text-secondary travel-top">
             <strong>On The Road</strong>
           </h1>

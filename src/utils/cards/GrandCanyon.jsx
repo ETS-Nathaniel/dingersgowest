@@ -9,7 +9,7 @@ export default () => {
           <h4 className="text-secondary">
             <strong>The Grand Canyon</strong>
           </h4>
-          <p className="text-faded mb-0">May 15 (Add UTC Conversion)</p>
+          <p className="text-faded mb-0">May 20-21</p>
           <table className="it-table-style">
             <tr className="it-table-row">
               <p>Weather goes here</p>

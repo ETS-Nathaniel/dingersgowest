@@ -3,7 +3,9 @@
   "features": [
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "name":"Home"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -14,7 +16,9 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "name":"New Orleans"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -25,7 +29,9 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "name":"San Antonio"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -36,7 +42,9 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "name":"White Sands National Park"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -47,7 +55,9 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "name":"Petrified Forest National Park"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -58,7 +68,9 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "name":"The Grand Canyon"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -69,7 +81,9 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "name":"Santa Monica Beach"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -80,7 +94,9 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "name":"Sequoia National Park"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -91,7 +107,9 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "name":"Salt Lake City"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -102,7 +120,9 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "name":"Rocky Mountain National Park"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -113,7 +133,9 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "name":"Kansas City"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -124,7 +146,9 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "name":"Gateway Arch"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -135,7 +159,9 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "name":"Nashville"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
