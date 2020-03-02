@@ -1,13 +1,20 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Carousel from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 import {NewOrleans, SanAntonio, WhiteSands, PetrifiedForest, GrandCanyon, SantaMonica, Sequoia, SaltLakeCity, RockyMountains, KansasCity, GatewayArch, Nashville} from './cards/index';
-import TravelCard from './cards/Traveling';
+import {T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,T13,focus} from './CardUtil';
 
 const CardBuilder = () => {
+  const [state, setState] = useState({
+    value: focus
+  })
+
+  var onChange = e => setState({ value: e.target ? e.target.value : e });
 
   return (
       <Carousel
+        value={state.value}
+        onChange={onChange}
         className="row"
         centered
         slidesPerPage={3.5}
@@ -24,31 +31,31 @@ const CardBuilder = () => {
         },
       }}
       >
-        <TravelCard hide="" date="May 16" />
+        {T1}
         <NewOrleans />
-        <TravelCard hide="" date="May 17" />
+        {T2}
         <SanAntonio />
-        <TravelCard hide="" date="May 18" />
+        {T3}
         <WhiteSands />
-        <TravelCard hide="" date="May 19" />
+        {T4}
         <PetrifiedForest />
-        <TravelCard hide="" date="May 20" />
+        {T5}
         <GrandCanyon />
-        <TravelCard hide="" date="May 21" />
+        {T6}
         <SantaMonica />
-        <TravelCard hide="" date="May 22" />
+        {T7}
         <Sequoia />
-        <TravelCard hide="" date="May 23-24" />
+        {T8}
         <SaltLakeCity />
-        <TravelCard hide="" date="May 24" />
+        {T9}
         <RockyMountains />
-        <TravelCard hide="" date="May 26" />
+        {T10}
         <KansasCity />
-        <TravelCard hide="" date="May 26" />
+        {T11}
         <GatewayArch />
-        <TravelCard hide="" date="May 27" />
+        {T12}
         <Nashville />
-        <TravelCard hide="" date="May 28" />
+        {T13}
     </Carousel>
   )}
 
