@@ -20,8 +20,30 @@ import TravelCard from './cards/Traveling';
   var T12 = null; //27th to Nashville (11am to 4pm)
   var T13 = null; //28th to HOME (12pm to 11pm)
 
-  if (day<16){T1=<TravelCard />}
+  if (day==16 && hour<16){T1=<TravelCard />}
   else if (day==16 && hour>=16){}
-  else if (day==17 && hour>=8){T2=<TravelCard />}
+  else if (day==17 && hour>=8){T2=<TravelCard />,focus=1}
+  else if (day==17 && hour>=18){focus=1}
+  else if (day==18 && hour>=11){T3=<TravelCard />,focus=2}
+  else if (day==18 && hour>20){focus=2}
+  else if (day==19 && hour>=12){T4=<TravelCard />,focus=3}
+  else if (day==19 && hour>=19){focus=3}
+  else if (day==20 && hour>=11){T5=<TravelCard />,focus=4}
+  else if (day==20 && hour>=14){focus=4}
+  else if (day==21 && hour>=16){T6=<TravelCard />,focus=5}
+  else if (day==21 && hour>=23){focus=5}
+  else if (day==22 && hour>=14){T7=<TravelCard />,focus=6}
+  else if (day==22 && hour>=19){focus=6}
+  else if (day==23 && hour>=16){T8=<TravelCard />,focus=7}
+  else if (day==24 && hour>=7){focus=7}
+  else if (day==24 && hour>=13){T9=<TravelCard />,focus=8}
+  else if (day==24 && hour>=20){focus=8}
+  else if (day==26 && hour>=6){T10=<TravelCard />,focus=9}
+  else if (day==26 && hour>=18){focus=9}
+  else if (day==26 && hour>=20){T11=<TravelCard />,focus=10}
+  else if (day==26 && hour>=23){focus=10}
+  else if (day==27 && hour>=11){T12=<TravelCard />,focus=11}
+  else if (day==27 && hour>=15){focus=11}
+  else if (day==28 && hour>=12){T13=<TravelCard />,focus=12}
 
   export {T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,T13,focus}
