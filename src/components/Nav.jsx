@@ -3,7 +3,7 @@ import React from 'react';
 function Nav () {
   return (
     <div>
-      <a class="menu-toggle rounded" href="#">
+      <a class="menu-toggle rounded" href="#page-top">
         <i class="fas fa-bars"></i>
       </a>
       <nav id="sidebar-wrapper">

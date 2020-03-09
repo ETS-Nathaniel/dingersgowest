@@ -5,7 +5,7 @@ export default () => {
 
   return (
         <div className="location-card bg-secondary">
-          <img className="image-head" src={NewOrleans} />
+          <img className="image-head" alt="New Orleands" src={NewOrleans} />
           <h4 className="text-secondary">
             <strong>New Orleans</strong>
           </h4>

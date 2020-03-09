@@ -5,7 +5,7 @@ export default () => {
 
   return (
         <div className="location-card bg-secondary">
-          <img className="image-head" src={GrandCanyon} />
+          <img className="image-head" alt="Grand Canyon" src={GrandCanyon} />
           <h4 className="text-secondary">
             <strong>The Grand Canyon</strong>
           </h4>

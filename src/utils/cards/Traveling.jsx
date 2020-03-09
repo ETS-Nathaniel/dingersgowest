@@ -9,6 +9,6 @@ export default (props) => {
             <strong>On The Road</strong>
           </h1>
           <p className="text-faded">{props.date}</p>
-          <img className="travel-image" src={DriveIcon} />
+          <img className="travel-image" alt="On The Road" src={DriveIcon} />
         </div>
   )}

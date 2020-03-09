@@ -5,7 +5,7 @@ export default () => {
 
   return (
         <div className="location-card bg-secondary">
-          <img className="image-head" src={WhiteSands} />
+          <img className="image-head" alt="White Sands" src={WhiteSands} />
           <h4 className="text-secondary">
             <strong>White Sands National Park</strong>
           </h4>

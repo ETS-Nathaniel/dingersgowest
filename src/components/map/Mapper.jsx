@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import MapGL, {Popup} from 'react-map-gl';
+import MapGL from 'react-map-gl';
 import Pins from './Pins';
 import '../../css/mapper.css';
 

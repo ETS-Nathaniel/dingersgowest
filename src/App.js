@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Header, Nav, Mapper, Itinerary, Photos, Footer} from './components';
 import './fonts.css';
 import './origin/vendor/bootstrap/css/bootstrap.min.css';
